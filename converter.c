@@ -46,7 +46,7 @@ void	b10_to_bx(int	value, char	*base_2, char	*base_16, int	*b2_msd, int	*b16_msd
 		proceed_value = devision_result;
 		i++;
 	}
-	base_16[i];
+	base_16[i] = '\0';
 	*b16_msd = i - 1;
 }
 
