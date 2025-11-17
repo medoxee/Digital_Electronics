@@ -9,7 +9,7 @@
  *  To convert a signed 8 bits integer to its negative value,
  *  we do the Two's comlement process (Google it).
  *  Example: 99 --> -99
- *  Note: in ligne where scanf is used, %hhd (h: short) is the format specifier of int8_t type
+ *  Note: in ligne where last printf is used, %hhd (h: short) is the format specifier of int8_t type
  */
 
 int8_t	two_complement(int8_t	positive_nbr)
@@ -30,7 +30,7 @@ int	main(void)
 	int8_t	negative_nbr; // example: -1 = 11111111 (MSD for - signe)
 	
 	printf("Enter a number between 1 and 127: ");
-	if ((scanf("%d", &value_int_type) != 1) || (value_int_type > 127))
+	if ((scanf("%d", &value_int_type) != 1) || (value_int_type > 127) || (value_int_type < 0))
 	{
 		// exit if scanf fails
 		printf("Program failed during scanf process!\n");
